@@ -182,6 +182,11 @@ static NSMutableArray *notificationQueue = nil;       // Global notification que
     return noticeView;
 }
 
++ (BOOL)viewIsInQueue: (AJNotificationView *)notificationView
+{
+    return [notificationQueue containsObject: notificationView];
+}
+
 - (void)showAfterDelay:(NSTimeInterval)delayInterval {
     
     [self.parentView addSubview:self];
